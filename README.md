@@ -207,7 +207,7 @@ More in [docs/TECHNICAL.md](docs/TECHNICAL.md).
 
 ## Disclaimer
 
-Use this only on devices **you own and are authorized to modify**. Flashing carries a real risk of bricking. Back up your data first. Check whether your model fuses EDL on system updates before you start. See [LICENSE](LICENSE) for the full notice.
+Use this only on devices **you own and are authorized to modify**. Flashing carries a real risk of bricking. Back up your data first. Check whether your model fuses EDL on system updates before you start. See **[DISCLAIMER.md](DISCLAIMER.md)** for the full risk notice and third-party attributions.
 
 ---
 
