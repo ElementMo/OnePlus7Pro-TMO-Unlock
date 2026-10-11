@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------
+# Line ending policy
+#
+# Windows batch files MUST keep CRLF, or cmd.exe can misparse them.
+# PowerShell scripts are also safer with CRLF on Windows.
+# Everything else normalises to LF for cross-platform diffs.
+# ---------------------------------------------------------------
+
+* text=auto eol=lf
+
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+*.psm1  text eol=crlf
+
+# Binary assets — never touch these
+*.bin   binary
+*.img   binary
+*.ops   binary
+*.ofp   binary
+*.png   binary
+*.jpg   binary
+*.zip   binary
+
+# Markup / docs
+*.md    text eol=lf
+*.txt   text eol=lf
+*.xml   text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+
+# Git housekeeping
+.gitattributes  text eol=lf
+.gitignore      text eol=lf
+LICENSE         text eol=lf
