@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------
+# OnePlus 7 Pro TMO Unlock — .gitignore
+# ---------------------------------------------------------------
+
+# Working directories created by the scripts
+# 脚本产生的临时目录
+/work/
+/extract/
+/output/
+*.orig
+
+# Large firmware packages — never commit these
+# 大体积固件包 —— 绝不提交
+*.ops
+*.ofp
+*.zip
+*.rar
+*.7z
+*.img
+!.gitkeep
+
+# But DO keep the small pre-built FRP blocks
+# 但保留小的、预构建的 FRP 块
+!bin/*.bin
+
+# Downloaded third-party tools (fetch them with scripts/00-setup.ps1)
+# 下载的第三方工具（用 scripts/00-setup.ps1 获取）
+/tools/oppo_decrypt/
+/tools/*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+env/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+._*
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

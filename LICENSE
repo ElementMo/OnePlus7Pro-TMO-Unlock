@@ -1,0 +1,52 @@
+MIT License
+
+Copyright (c) 2026 <YOUR NAME / GITHUB USERNAME>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+ADDITIONAL NOTICE — FLASHING RISK / 额外声明 — 刷机风险
+
+This project modifies firmware packages and instructs the user to flash a
+device via Qualcomm EDL. Flashing carries a real risk of rendering a device
+unbootable ("hard brick"). On some OPPO/OnePlus models, official system
+updates permanently blow the EDL no-auth fuse, which is irreversible.
+
+本项目会修改固件包并指导用户通过高通 EDL 刷写设备。刷机存在真实的
+"硬砖"风险。部分 OPPO/一加 机型的官方系统更新会永久熔断 EDL 免授权，
+不可逆。
+
+USE AT YOUR OWN RISK. The authors accept no liability for damaged or
+bricked devices.
+
+使用风险自负。作者不对设备损坏或变砖承担任何责任。
+
+---
+
+THIRD-PARTY COMPONENTS / 第三方组件
+
+This repository does not bundle third-party tools. It downloads and/or
+references them:
+
+  - oppo_decrypt  (bkerler)       https://github.com/bkerler/oppo_decrypt
+  - MSM Download Tool             OnePlus / Qualcomm (proprietary, not redistributed)
+  - AOSP                          PersistentDataBlockService.java (Apache-2.0)
+
+All rights to those components belong to their respective authors.

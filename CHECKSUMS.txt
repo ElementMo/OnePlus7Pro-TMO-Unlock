@@ -1,0 +1,17 @@
+﻿# SHA256 Checksums — OnePlus 7 Pro (T-Mobile GM1915) Bootloader Unlock
+# 校验值 — 一加 7 Pro (T-Mobile GM1915) Bootloader 解锁
+# Generated / 生成: 2026-10-12 00:13:00
+
+ae117be2a9a48d0dd18fb12a5c467380b326e95f47839d5ad75845c7d033f534  .gitignore
+fc7dde40d5f1392c83606c94d1c60f057e6d99a9d538298ec2e725a002534ee0  bin/config_patched.bin
+07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541  bin/config_stock_allzero.bin
+149337c6ed23e304a15ef042a2f18bf321f68bda26f47cee45386cedd0a1a7b1  docs/settings.xml.sample
+03c54da82fc8ef70da8381948dea49ef0dbf49401b3bac226acb318c2d2f055e  docs/TECHNICAL.md
+17364c14f67970d55deb2f26d9fc777d061972798710b2408bffdd65bb6af29f  LICENSE
+273f4ecdadfaaa957da5136b9b24d4ade4ce3da840484323caa406e15843fb06  README.md
+2847dafe3d1836f928546d7ef8da0bd450c963b18f6ae68b305abc3f9f489b37  README.zh-CN.md
+d9cb7f1a5b8a4dbb5713a2b152f54e10e1ed35bd2f6af93900095986e0807a54  scripts/00-setup.ps1
+9a12fcf52943fc95a4280effc7d9963ec7d88e4880292f19903a98b2113cbb61  scripts/patch-ops-for-unlock.ps1
+233efa3702d23bfae59f78906d8133f170293c854ef0786a2fd554e4f8f9a8bf  scripts/share-clash-proxy-to-phone.bat
+2405ea63e0366bd674ea904cc8ec3758c6ef51c168747f219aa2c90db01a7c4b  scripts/verify-unlock.ps1
+eb74a93f78b4cded11232b74c04695903f701ed6fa5ffa7398eaf3a00b0b9bc7  tools/TOOL-SOURCES.md
