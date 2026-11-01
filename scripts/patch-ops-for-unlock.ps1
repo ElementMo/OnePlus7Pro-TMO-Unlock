@@ -197,7 +197,16 @@ $digest = $sha.ComputeHash($input)
 $sha.Dispose()
 [Array]::Copy($digest, 0, $block, 0, 32)
 
-$newSha = ($digest | ForEach-Object { '{0:x2}' -f $_ }) -join ''
+# ★ 关键：$digest 是 FRP 块的【内部摘要】，不是 config.bin 的【文件哈希】。
+#   settings.xml 里的 Sha256 必须等于整个 config.bin 文件的 SHA256，
+#   否则 MSM 工具（SkipImgSHA256Check="false"）会判定镜像被篡改并拒绝刷写。
+# ★ KEY: $digest is the FRP block's INTERNAL digest, not the FILE hash.
+#   settings.xml must record the SHA256 of the whole config.bin file,
+#   otherwise the MSM tool rejects the image (SkipImgSHA256Check="false").
+$sha = [System.Security.Cryptography.SHA256]::Create()
+$fileDigest = $sha.ComputeHash($block)
+$sha.Dispose()
+$newSha = ($fileDigest | ForEach-Object { '{0:x2}' -f $_ }) -join ''
 $marker = ($block[32..35] | ForEach-Object { '{0:X2}' -f $_ }) -join ' '
 
 Info "  魔数      / marker    = $marker  (0x19901873 小端)"
@@ -224,6 +233,11 @@ Copy-Item $configPath "$configPath.orig" -Force
 [System.IO.File]::WriteAllBytes($configPath, $block)
 Ok "config.bin 已替换（原文件备份为 config.bin.orig）"
 Ok "config.bin replaced (original backed up as config.bin.orig)"
+
+# 落盘复核：磁盘上的文件哈希必须等于即将写入 settings.xml 的值
+$written = (Get-FileHash -LiteralPath $configPath -Algorithm SHA256).Hash.ToLower()
+if ($written -ne $newSha) { Die "写入后哈希不一致 / written hash mismatch: $written != $newSha" }
+Ok "落盘复核通过 / on-disk hash verified: $written"
 
 # 更新 settings.xml 里的 SHA256 —— MSM 工具会校验这个值
 # Update the SHA256 in settings.xml — the MSM tool verifies this
